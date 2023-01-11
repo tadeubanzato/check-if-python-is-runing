@@ -1,13 +1,14 @@
-# Description
-This is a general batch to check if a python script is running and or not.
-The script is going to:
-1. Verify if PID is available on the temp folder (linux)
-2. If PID exists the python script is runing if not it will trigger the script
-3. CRON Job that will run every couple of hours and check if script is running
-4. Script will run in a Screen on the background
-
-## Use Case
+# Use Case
 As a developer I want to make sure my Python script is running recurrently and/or if it breacks some how I want to start it automatically without me having to run it manually once again.
+
+# Description
+A batch scrip that will check if Python script is running, if not it start the script once again.
+
+### The script is going to:
+1. When running the python script it will generate a PID
+2. When bash runs it verifies if PID exists if not it will start the python script again or for the first time
+3. Setup a CRON Job that will run the bash script to check PID and start the Python script
+4. All the script runs on Screen which is a Linux app that manages multiple CLI screens
 
 ## Screen Instalation
 Screen is an application to allow users to have multiple terminals runing on linux servers.
